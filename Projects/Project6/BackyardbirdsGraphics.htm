@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Backyard Birds - Graphics</title>
+
+<style type="text/css">
+body { 
+	background-color: #FFFAF0;
+	font-family: ducks;
+	margin: 0 10%;
+}
+
+@font-face {
+ font-family: 'Lora-Regular'; 
+ src: url('Fonts/Lora-Regular.eot');
+ src: local('Lora-Regular'), url('Fonts/Lora-Regular.ttf') format('truetype');
+}
+
+h1{
+	font-family: ducks;
+	color: #5B6057;
+	font-size: 36px;
+	text-align: center;
+}
+h2 {color:#6E9075;
+	font-size: 1.26em;
+	text-transform: uppercase;
+	text-align: center;
+}
+h4 { color: #563635;
+	font-style: italic;
+}
+a:link { color: #78C091}
+
+a:visited {color: #52C4A2}
+
+a:hover {color: #8C84DB}
+
+	#thumbs, #image {
+		width: 900px;
+		text-align: center;
+		margin: 0 auto 0 auto;
+		color: #000;
+	}
+
+	#thumbs {
+		margin-top: 10px;
+	}
+
+			
+	#thumbs img {
+		border: solid 1px #000;
+		margin: 5px;
+	}
+
+	#image{
+		height:500px;
+	}
+
+	.instructions{
+		font-style:italic;
+	}
+
+</style>
+
+<script language="JavaScript" type="text/javascript">
+
+	PrintButton1 = new Image
+	PrintButton2 = new Image
+	logo1 = new Image
+	logo2 = new Image
+if (document.images) {
+	PrintButton1.src = "images/Print1.jpg"
+	PrintButton2.src = "images/Print2.jpg"
+	logo1.src = "images/Logo1.jpg"
+	logo2.src = "images/Logo2.jpg"
+}
+
+
+		var imgArray = new Array(
+			'Image1Lg.jpg',
+			'Image2Lg.jpg',
+			'Image3Lg.jpg',
+			'Image4Lg.jpg'
+			
+
+		);
+
+
+		var titleArray = new Array(
+			'Large Hawk',
+			'White Swan',
+			'Wood Duck',
+			'Cardinal',
+			
+		);
+			
+		var imgPath = "Images/Fullsize/";
+		
+		function swapImage(imgID) {
+
+			var theImage = document.getElementById('theImage');
+			var textDiv = document.getElementById('bottomText');
+
+			var newImg;
+			var textTitle;
+
+			newImg = imgArray[imgID];
+			theImage.src = imgPath + newImg;
+
+			textTitle=titleArray[imgID];
+
+      			textDiv.innerHTML = textTitle;
+		}
+			
+		function preloadImages() {		
+			for(var i = 0; i < imgArray.length; i++) {
+				var tmpImg = new Image;
+				tmpImg.src = imgPath + imgArray[i];
+			}
+		}
+		
+
+</script>
+
+
+<head>
+
+<div style="text-align: center;">
+<a href="" 
+onmouseover="document.getElementById('print').src='images/Print2.jpg';"
+onmouseout="document.getElementById('print').src='images/Print1.jpg';">
+<img src="images/Print1.jpg" alt="Print Page" width="200" height="50" id="print"></a>
+</div>
+
+
+
+<br />
+
+<div style="text-align: center;">
+<a href=""
+onmouseover="document.getElementById('logo').src='images/Logo2.jpg';"
+onmouseout="document.getElementById('logo').src='images/Logo1.jpg';">
+<img src="images/Logo1.jpg" alt="Logo" id="logo"></a>
+</div>
+
+
+<br />
+<br />
+<br />
+<br />
+
+
+<div id="thumbs">
+		<img src="Images/Thumbnails/image1Sm.jpg" alt="HawkLg" onmouseover="swapImage(0);" />
+		<img src="Images/Thumbnails/image2Sm.jpg" alt="Swan" onmouseover="swapImage(1);" />
+		<img src="Images/Thumbnails/image3Sm.jpg" alt="WoodDuck" onmouseover="swapImage(2);" />
+		<img src="Images/Thumbnails/image4Sm.jpg" alt="Cardinall" onmouseover="swapImage(3);" />
+		
+</div>
+
+	<div id="image">
+
+		<img id="theImage" src="Images/FullSize/Image1Lg.jpg" alt="HawkLg" />
+		<h3 id="bottomText">Large Hawk</h3>
+	</div>
+
+
+<br />
+<br />
+<br />
+<br />
+
+
+
+</div>
+
+<p>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
+</p>
+  
+</head>
+</body>
+</html>
