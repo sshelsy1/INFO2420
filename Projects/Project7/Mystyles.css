@@ -1,0 +1,128 @@
+﻿@charset "utf-8";
+/*CSS Document*/
+@font-face {
+    font-family: 'Ducks';
+    src: url('Fonts/Ducks.eot');
+    src: local('Ducks'), url('Fonts/Ducks.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lemonada';
+    src: url('Fonts/Lemonada-Regular.eot');
+    src: local('Lemonada'), url('Fonts/Lemonada-Regular.ttf') format('truetype');
+}
+body {
+    background-color: #5B6057;
+    font-family: Ducks;
+    font-size: medium;
+    color: #4D3200;
+}
+
+header {
+    width: 900px;
+    height: 200px;
+    background-color: #78C091;
+    text-align: center;
+    padding-top: 10px;
+    margin: auto;
+}
+
+section {
+    width: 900px;
+    background-color: #6E9075;
+    background-repeat: repeat-y;
+    overflow: hidden;
+    margin: auto;
+}
+
+nav {
+    float: left;
+    width: 200px;
+    height: 1120px;
+    background-color: #FFFAF0;
+}
+
+article{
+    float: left;
+    width: 650px;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    width: 900px;
+    height: 70px;
+    background-color:#78C091;
+    margin: auto;
+}
+
+.logoleft{
+    float: left;
+    padding-top: 0px;
+    padding-left: 15px;
+}
+
+nav a {
+    border: 6px inset #CCCCCC;
+    background-color: #563635;
+    line-height: 250%;
+    font-weight: normal;
+    font-size: 27px;
+    color: #FFFAF0;
+    text-decoration: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 20px;
+    font-family: Ducks;
+}
+
+nav a:hover {
+        color: #81F0E5;
+        border: 2px outset #CCCCCC;
+}
+h1 {
+    color: #FFFAF0;
+    text-align: center;
+    font-size: xx-large;
+}
+
+h2 {
+    color: #FFFAF0;
+    text-align: center;
+    font-size: 25px;
+}
+h3 {
+    color: #FFFAF0;
+    text-align: center;
+    font-size: 21px;
+}
+p {
+    color: #FFFAF0;
+    text-align: center;
+    font-size: 20px;
+}
+
+#thumbs, #image {
+    width: 600px;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    color: #000;
+}
+
+#thumbs {
+    margin-top: 10px;
+}
+
+
+#thumbs img {
+        border: solid 1px #000;
+        margin: 5px;
+}
+
+#image {
+    height: 500px;
+}
+
+.instructions {
+    font-style: italic;
+}
